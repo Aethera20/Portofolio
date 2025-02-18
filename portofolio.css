@@ -19,7 +19,11 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 
 .logo {
     font-size: 24px;
@@ -28,17 +32,39 @@ header {
     margin-left: 20px;
 }
 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
 nav {
-    float: right;
     margin-right: 20px;
 }
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
 
 nav a {
     color: #333; /* Teks tautan gelap */
     text-decoration: none;
     padding: 15px;
     transition: background 0.3s;
+    font-size: 1.2rem; /* Updated font size */
 }
+
 
 nav a:hover,
 nav a.active {
@@ -141,4 +167,135 @@ footer {
     padding: 10px 0;
     background: #ae9d7f; /* Warna gelap untuk footer */
     color: #fff;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0, 3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content p {
+    font-weight: 1.6rem;
+  }
+
+  .menu p {
+    font-size: 1.2rem;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .map {
+    height: 30rem;
+  }
+
+  .contact .row form {
+    padding-top: 0;
+  }
+}
+/* Mobile Phone */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+.nav-menu {
+    position: fixed;
+    top: 60px;
+    right: -300px;
+    width: 150px;
+    height: calc(100vh - 60px);
+    background: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: right 0.3s;
+    padding: 20px;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    display: none;
+}
+
+
+
+    
+.nav-menu.active {
+    right: 0;
+    display: flex;
+    box-shadow: -2px 0 15px rgba(0,0,0,0.2);
+}
+
+
+
+    
+    .nav-menu a {
+        margin: 15px 0;
+        font-size: 1.2rem;
+    }
+    
+    html {
+        font-size: 55%;
+    }
 }
