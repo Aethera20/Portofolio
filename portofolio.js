@@ -1,8 +1,18 @@
 // Typing effect for the introduction
 const typingText = document.querySelector('.typing-text span');
-const textArray = ['Web Developer', 'Designer', 'Digital Marketer'];
+const textArray = ['Web Developer', 'Designer', 'Digital Marketing'];
 let textIndex = 0;
 let charIndex = 0;
+
+// Mobile menu functionality
+const mobileMenu = document.getElementById('mobile-menu');
+const navMenu = document.querySelector('.nav-menu');
+
+mobileMenu.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
 
 function type() {
     if (charIndex < textArray[textIndex].length) {
