@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #ae9d7f; /* Latar belakang cream */
+    color: #333; /* Teks utama */
+}
+
+header {
+    background: #ae9d7f; /* Warna cream untuk header */
+    color: #333; /* Teks gelap di header */
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color:#333;
+    margin-left: 20px;
+}
+
+nav {
+    float: right;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #333; /* Teks tautan gelap */
+    text-decoration: none;
+    padding: 15px;
+    transition: background 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background: #ae9d7f; /* Warna cream saat hover */
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 20px;
+    background: #fff; /* Latar belakang putih untuk bagian home */
+    border-radius: 10px; /* Sudut melingkar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+}
+
+.home-img img {
+    max-width: 300px;
+    border-radius: 50%; /* Gambar bulat */
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.home-content h3 {
+    font-size: 24px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #333; /* Warna ikon sosial */
+    font-size: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ae9d7f; /* Warna cream untuk tombol */
+    color: #333; /* Teks tombol gelap */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #ae9d7f; /* Warna tombol saat hover */
+}
+
+.services, .skills, .education, .experience, .contact {
+    padding: 60px 20px;
+    background: #fff; /* Latar belakang putih untuk bagian lainnya */
+    margin: 20px 0;
+    border-radius: 10px; /* Sudut melingkar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan lembut untuk bagian */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333; /* Teks heading gelap */
+}
+
+.service-item {
+    margin-bottom: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input, .contact textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 10px;
+    background: #ae9d7f; /* Warna cream untuk tombol kirim */
+    color: #333; /* Teks tombol gelap */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: #c1b5a1; /* Warna tombol kirim saat hover */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #ae9d7f; /* Warna gelap untuk footer */
+    color: #fff;
+}
