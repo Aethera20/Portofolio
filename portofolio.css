@@ -73,13 +73,14 @@ nav a.active {
 
 .home {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     padding: 100px 20px;
     background: #fff; /* Latar belakang putih untuk bagian home */
     border-radius: 10px; /* Sudut melingkar */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
 }
+
 
 .home-img img {
     max-width: 300px;
@@ -88,8 +89,8 @@ nav a.active {
 
 .home-content {
     max-width: 600px;
+    text-align: center;
 }
-
 .home-content h1 {
     font-size: 36px;
     margin-bottom: 10px;
@@ -261,6 +262,21 @@ footer {
     .menu-toggle {
         display: flex;
     }
+    
+    .home {
+        padding: 60px 20px;
+        text-align: center;
+    }
+    
+    .home-img {
+        order: -1;
+        margin-bottom: 30px;
+    }
+    
+    .home-content {
+        max-width: 100%;
+    }
+
     
 .nav-menu {
     position: fixed;
