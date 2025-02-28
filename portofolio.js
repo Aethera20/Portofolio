@@ -16,10 +16,19 @@ const animateOnScroll = () => {
 
 // Typing effect with animations for the introduction
 const typingText = document.querySelector(".typing-text span");
-const textArray = ["Web Developer", "UI/UX Designer", "Digital Market"];
+const textArray = ["Web Developer", "UI/UX Designer", "Digital Marketer"];
 let textIndex = 0;
 let charIndex = 0;
 let isTyping = true;
+
+// Mobile menu functionality
+const mobileMenu = document.getElementById("mobile-menu");
+const navMenu = document.querySelector(".nav-menu");
+
+mobileMenu.addEventListener("click", () => {
+  mobileMenu.classList.toggle("active");
+  navMenu.classList.toggle("active");
+});
 
 // Add scroll event listener
 window.addEventListener("scroll", animateOnScroll);
@@ -100,6 +109,15 @@ document.addEventListener('DOMContentLoaded', function() {
   checkSkills(); // Initial check in case the section is already in view
 });
 
+// Cube rotation functionality
+const cube = document.getElementById("cube-container");
+let mouseX = 0,
+  mouseY = 0;
+let cubeX = 0,
+  cubeY = 0;
+const maxRotation = 45; // Increased rotation range
+const sensitivity = 0.5; // Rotation sensitivity
+
 // Track mouse movement
 document.addEventListener("mousemove", (e) => {
   const rect = cube.getBoundingClientRect();
@@ -109,6 +127,26 @@ document.addEventListener("mousemove", (e) => {
   mouseX = (e.clientX - centerX) * sensitivity;
   mouseY = (e.clientY - centerY) * sensitivity;
 });
+
+// Smooth cube movement
+function moveCube() {
+  // Apply easing for smooth movement
+  cubeX += (mouseX - cubeX) * 0.1;
+  cubeY += (mouseY - cubeY) * 0.1;
+
+  // Apply transformation with perspective
+  cube.style.transform = `
+    translate(-50%, -50%)
+    perspective(1000px)
+    rotateX(${-cubeY}deg)
+    rotateY(${cubeX}deg)
+  `;
+
+  requestAnimationFrame(moveCube);
+}
+
+// Start cube movement
+moveCube();
 
 // Form validation
 const form = document.querySelector("form");
