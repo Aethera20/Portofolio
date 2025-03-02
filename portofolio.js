@@ -16,7 +16,7 @@ const animateOnScroll = () => {
 
 // Typing effect with animations for the introduction
 const typingText = document.querySelector(".typing-text span");
-const textArray = ["Web Developer", "UI/UX Designer", "Digital Marketer"];
+const textArray = ["Web Developer", "UI/UX Designer", "Digital Market"];
 let textIndex = 0;
 let charIndex = 0;
 let isTyping = true;
