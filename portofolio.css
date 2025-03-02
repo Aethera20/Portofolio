@@ -579,7 +579,7 @@ footer {
 
   /* Cube Styles */
   #cube-container {
-    top: 295%; /* Adjusted for better positioning on mobile */
+    top: 275%; /* Adjusted for better positioning on mobile */
     left: 50%;
     position: absolute;
     width: 100px; /* Adjusted size for mobile */
