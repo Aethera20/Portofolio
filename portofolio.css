@@ -453,6 +453,7 @@ footer {
 @media (max-width: 450px) {
   html {
     font-size: 55%;
+    overflow-x: hidden;
   }
 
   body {
