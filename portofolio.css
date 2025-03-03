@@ -107,7 +107,7 @@ header {
   border-radius: 5px;
 }
 
-.menu-toggle .bar{
+.menu-toggle .bar {
   width: 25px;
   height: 4px;
   background-color: #ffffff;
@@ -464,7 +464,9 @@ footer {
     display: inline-block;
   }
 
-  header, section, .container {
+  header,
+  section,
+  .container {
     width: 100%;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
   }
@@ -503,7 +505,6 @@ footer {
     text-align: center;
   }
 
-
   .experience .card-container {
     display: grid; /* Menggunakan grid untuk tata letak */
     grid-template-columns: repeat(2, 1fr); /* 2 kolom */
@@ -531,7 +532,7 @@ footer {
 
   /* Cube Styles */
   #cube-container {
-    top: 268%; /* Adjusted for better positioning on mobile */
+    top: 267%; /* Adjusted for better positioning on mobile */
     left: 50%;
     position: absolute;
     width: 100px; /* Adjusted size for mobile */
@@ -552,7 +553,6 @@ footer {
     height: 50px;
     font-size: 24px; /* Menyesuaikan ukuran ikon */
   }
-
 }
 
 /* Tablet */
@@ -565,11 +565,13 @@ footer {
     overflow-x: hidden; /* Allow horizontal scrolling */
   }
 
-  header, section, .container {
+  header,
+  section,
+  .container {
     width: 100%;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
   }
-  
+
   .nav-menu {
     display: flex;
     justify-content: space-around; /* Distribute space evenly */
