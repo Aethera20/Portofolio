@@ -449,127 +449,29 @@ footer {
     font-size: 75%;
   }
 }
-
 /* Mobile Phone */
 @media (max-width: 450px) {
   html {
-    font-size: 55%;
+    font-size: 50%;
   }
 
   body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    max-width: 100vw; /* Ensure body does not exceed viewport */
+    overflow-x: hidden; /* Allow horizontal scrolling */
   }
 
   .menu-toggle {
     display: flex;
   }
 
-  header, section, .container {
-    width: 100%;
-    box-sizing: border-box; /* Include padding and border in the element's total width */
-    max-width: 100%; /* Ensure container does not exceed viewport width */
-  }
-  
-  .nav-menu {
-    display: flex;
-    justify-content: space-around; /* Distribute space evenly */
-    padding: 0 20px; /* Adjust padding as needed */
-    width: 100%; /* Remove max-width to avoid overflow */
-  }
-
-  .home {
-    padding: 60px 20px;
-    text-align: center;
-  }
-
-  .home-img {
-    order: -1;
-    margin-bottom: 30px;
-    margin-top: 50px;
-  }
-
-  .home-content {
-    width: 100%; /* Ensure full width */
-  }
-
-  .nav-menu {
-    position: fixed;
-    top: 60px;
-    right: -300px;
-    width: 100%;
-    height: calc(100vh - 60px);
-    background: #ffffff;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    transition: right 0.3s;
-    padding: 20px;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
-  }
-
-  .nav-menu.active {
-    right: 0;
-    display: flex;
-    box-shadow: -2px 0 15px rgba(0, 0, 0, 0.2);
-  }
-
-  .nav-menu a {
-    margin: 15px 0;
-    font-size: 1.2rem;
-  }
-
   .experience .card-container {
-    display: grid; /* Use grid for layout */
-    grid-template-columns: 1fr; /* Change to 1 column for mobile */
-    gap: 20px; /* Space between cards */
+    display: grid; /* Menggunakan grid untuk tata letak */
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+    gap: 20px; /* Jarak antar kartu */
     padding: 0 10px;
   }
 
   .experience .flip-card {
     margin: 0;
-    width: auto; /* Ensure cards fit container */
-    max-width: 100%; /* Avoid overflow */
-  }
-
-  .services,
-  .skills,
-  .education,
-  .experience,
-  .contact {
-    padding: 30px 15px;
-    margin: 10px 0;
-    max-width: 100%; /* Avoid overflow */
-  }
-
-  .contact-container {
-    flex-direction: column;
-  }
-
-  .contact-info,
-  .contact form {
-    width: 100%;
-    margin: 0;
-  }
-
-  .contact-info ul li {
-    font-size: 1rem;
-  }
-
-  .contact input,
-  .contact textarea {
-    font-size: 0.9rem;
-    width: 100%; /* Ensure inputs are full width */
-  }
-
-  .contact button {
-    font-size: 0.9rem;
-  }
-
-  .skill {
     width: 100%;
   }
 
@@ -588,25 +490,27 @@ footer {
 
   /* Cube Styles */
   #cube-container {
-    top: 287%; /* Adjusted for better positioning on mobile */
+    top: 270%; /* Adjusted for better positioning on mobile */
     left: 50%;
     position: absolute;
-    width: 80px; /* Adjusted size for mobile */
-    height: 80px; /* Adjusted size for mobile */
-    transform: translateX(-50%); /* Center the cube */
+    width: 100px; /* Adjusted size for mobile */
+    height: 100px; /* Adjusted size for mobile */
   }
 
   #cube-container .face {
-    width: 80px; /* Adjusted size for mobile */
-    height: 80px; /* Adjusted size for mobile */
+    width: 100px; /* Adjusted size for mobile */
+    height: 100px; /* Adjusted size for mobile */
   }
 }
-    
 
 /* Tablet */
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
+  }
+
+  body {
+    overflow-x: hidden; /* Allow horizontal scrolling */
   }
 
   header, section, .container {
@@ -637,7 +541,6 @@ footer {
   .nav-menu {
     position: fixed;
     top: 60px;
-    right: -300px;
     width: 150px;
     height: calc(100vh - 60px);
     background: #ffffff;
