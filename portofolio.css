@@ -472,6 +472,8 @@ footer {
     display: flex;
     justify-content: space-around; /* Distribute space evenly */
     padding: 0 20px; /* Adjust padding as needed */
+    max-width: 100%;
+    width: 100%;
   }
 
   .home {
@@ -493,7 +495,7 @@ footer {
     position: fixed;
     top: 60px;
     right: -300px;
-    width: 150px;
+    width: 100%;
     height: calc(100vh - 60px);
     background: #ffffff;
     flex-direction: column;
@@ -503,12 +505,14 @@ footer {
     padding: 20px;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     display: none;
+    max-width: 100%;
   }
 
   .nav-menu.active {
     right: 0;
     display: flex;
     box-shadow: -2px 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
   }
 
   .nav-menu a {
@@ -579,7 +583,7 @@ footer {
 
   /* Cube Styles */
   #cube-container {
-    top: 283%; /* Adjusted for better positioning on mobile */
+    top: 287%; /* Adjusted for better positioning on mobile */
     left: 50%;
     position: absolute;
     width: 100px; /* Adjusted size for mobile */
