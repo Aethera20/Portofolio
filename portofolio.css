@@ -530,7 +530,7 @@ footer {
 
   /* Cube Styles */
   #cube-container {
-    top: 270%; /* Adjusted for better positioning on mobile */
+    top: 268%; /* Adjusted for better positioning on mobile */
     left: 50%;
     position: absolute;
     width: 100px; /* Adjusted size for mobile */
@@ -541,6 +541,16 @@ footer {
     width: 100px; /* Adjusted size for mobile */
     height: 100px; /* Adjusted size for mobile */
   }
+
+  .whatsapp-float {
+    /* Mengatur posisi agar lebih aman di layar kecil */
+    right: 10px; /* Mengurangi jarak dari kanan */
+    bottom: 20px; /* Mengurangi jarak dari bawah */
+    width: 50px; /* Menyesuaikan ukuran untuk perangkat kecil */
+    height: 50px;
+    font-size: 24px; /* Menyesuaikan ukuran ikon */
+  }
+
 }
 
 /* Tablet */
@@ -1141,6 +1151,7 @@ ul {
   text-align: center;
   font-size: 30px;
   box-shadow: 0 0 15px #000000, 0 0 30px #4e4f51;
+  z-index: 9999;
 }
 
 .whatsapp-float i {
