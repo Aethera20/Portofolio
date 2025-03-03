@@ -452,7 +452,7 @@ footer {
 /* Mobile Phone */
 @media (max-width: 450px) {
   html {
-    font-size: 50%;
+    font-size: 55%;
   }
 
   body {
@@ -460,7 +460,7 @@ footer {
   }
 
   .menu-toggle {
-    display: flex;
+    display: inline-block;
   }
 
   header, section, .container {
@@ -469,29 +469,22 @@ footer {
   }
 
   .nav-menu {
-    display: flex;
-    justify-content: space-around; /* Distribute space evenly */
-    padding: 0 20px; /* Adjust padding as needed */
+    padding: 1rem 5%;
   }
 
   .nav-menu {
-    position: fixed;
-    top: 60px;
-    width: 150px;
-    height: calc(100vh - 60px);
+    position: absolute;
+    top: 100%;
+    right: -100%;
     background: #ffffff;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    transition: right 0.3s;
-    padding: 20px;
+    width: 100%;
+    height: 100vh;
+    transition: 0.3s;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
   }
 
   .nav-menu.active {
     right: 0;
-    display: flex;
     box-shadow: -2px 0 15px rgba(0, 0, 0, 0.2);
   }
 
@@ -499,6 +492,16 @@ footer {
     margin: 15px 0;
     font-size: 1.2rem;
   }
+
+  .navbar .navbar-nav a {
+    display: block;
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
 
   .experience .card-container {
     display: grid; /* Menggunakan grid untuk tata letak */
@@ -527,7 +530,7 @@ footer {
 
   /* Cube Styles */
   #cube-container {
-    top: 275%; /* Adjusted for better positioning on mobile */
+    top: 270%; /* Adjusted for better positioning on mobile */
     left: 50%;
     position: absolute;
     width: 100px; /* Adjusted size for mobile */
