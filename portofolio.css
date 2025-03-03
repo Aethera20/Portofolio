@@ -463,6 +463,43 @@ footer {
     display: flex;
   }
 
+  header, section, .container {
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-around; /* Distribute space evenly */
+    padding: 0 20px; /* Adjust padding as needed */
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 60px;
+    width: 150px;
+    height: calc(100vh - 60px);
+    background: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: right 0.3s;
+    padding: 20px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+
+  .nav-menu.active {
+    right: 0;
+    display: flex;
+    box-shadow: -2px 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-menu a {
+    margin: 15px 0;
+    font-size: 1.2rem;
+  }
+
   .experience .card-container {
     display: grid; /* Menggunakan grid untuk tata letak */
     grid-template-columns: repeat(2, 1fr); /* 2 kolom */
@@ -476,7 +513,7 @@ footer {
   }
 
   .skill-bar {
-    width: 60%;
+    width: 80%;
   }
 
   .card-container {
@@ -490,7 +527,7 @@ footer {
 
   /* Cube Styles */
   #cube-container {
-    top: 270%; /* Adjusted for better positioning on mobile */
+    top: 275%; /* Adjusted for better positioning on mobile */
     left: 50%;
     position: absolute;
     width: 100px; /* Adjusted size for mobile */
