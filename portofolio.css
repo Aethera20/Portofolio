@@ -518,7 +518,7 @@ footer {
   }
 
   .skill-bar {
-    width: 80%;
+    width: 100%;
   }
 
   .card-container {
@@ -536,7 +536,8 @@ footer {
     left: 50%;
     position: absolute;
     width: 100px; /* Adjusted size for mobile */
-    height: 100px; /* Adjusted size for mobile */
+    height: 100px; 
+    display: none;/* Adjusted size for mobile */
   }
 
   #cube-container .face {
